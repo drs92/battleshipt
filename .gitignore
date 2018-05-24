@@ -2,3 +2,6 @@ node_modules
 **/*.css
 **/*.js
 **/*.js.map
+!postcss.config.js
+!webpack.config.dev.js
+!webpack.config.prod.js
