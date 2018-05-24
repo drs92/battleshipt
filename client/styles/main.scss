@@ -1,0 +1,68 @@
+@import './variables';
+@import './utils';
+
+body {
+    font-family: $body-font;
+    text-align: center;
+}
+h1 {
+    font-family: $heading-font;
+}
+button {
+    font-family: $heading-font;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.board {
+    // max-width: 50%;
+    margin: 1em;
+    height: auto;
+    flex: 1;
+    max-width: 600px;
+
+    &:before {
+        content: '';
+        padding-top: 100%;
+        float: left;
+    }
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+.square {
+    flex: 1;
+    height: auto;
+    color: white;
+    text-align: center;
+    background-color: $primary-color;
+    border: 1px solid $secondary-color;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        padding-top: 100%;
+        float: left;
+    }
+
+    &.ghost {
+        background-color: grey;
+    }
+
+    &.ship {
+        background-color: darkblue;
+    }
+
+    &.hit {
+        background-color: red;
+    }
+
+    &.miss {
+        background-color: white;
+    }
+}
